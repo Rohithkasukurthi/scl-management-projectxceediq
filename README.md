@@ -63,25 +63,6 @@ npm start
 Now, navigate to `localhost:3000` in your browser. 
 The Backend API will be running at `localhost:5000`.
 <br>
-# Error Solution
-
-If you encounter a network error while signing up, follow these steps to resolve it:
-
-1. Navigate to the `src > redux > userRelated > userHandle.js` file.
-
-2. Add the following line after the import statements:
-
-```javascript
-const REACT_APP_BASE_URL = "http://localhost:5000";
-```
-
-3. Replace all instances of `process.env.REACT_APP_BASE_URL` with `REACT_APP_BASE_URL`.
-
-**IMPORTANT:** Repeat the same process for all other files with "Handle" in their names.
-
-For example, in the `redux` folder, there are other folders like `userRelated`. In the `teacherRelated` folder, you'll find a file named `teacherHandle`. Similarly, other folders contain files with "Handle" in their names. Make sure to update these files as well.
-
-The issue arises because the `.env` file in the frontend may not work for all users, while it works for me.
 
 # Deployment
 * Render - server side
